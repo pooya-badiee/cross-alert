@@ -20,12 +20,6 @@ export const windowsAlert: AlertFunction = (message, { title = 'Alert' } = {}) =
     if (result.error) {
       throw result.error
     }
-
-    if (result.stderr) {
-      console.error('PowerShell stderr:', result.stderr)
-    } else {
-      console.log('PowerShell stdout:', result.stdout)
-    }
   } catch (error) {
     console.error('Failed to display message box:', error)
   }
