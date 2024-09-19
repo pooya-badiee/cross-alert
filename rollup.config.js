@@ -17,5 +17,4 @@ export default defineConfig({
     },
   ],
   plugins: [typescript(), commonjs()],
-  external: ['child_process'],
 })
