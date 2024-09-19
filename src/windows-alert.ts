@@ -13,7 +13,7 @@ export const windowsAlert: AlertFunction = (message, { title = 'Alert' } = {}) =
 
   try {
     const result = spawnSync('powershell', ['-Command', powershellCommand], {
-      stdio: ['ignore', 'pipe', 'pipe'],
+      stdio: 'ignore',
       encoding: 'utf-8',
     })
 

@@ -10,7 +10,7 @@ export const macAlert: AlertFunction = (message, { title = 'Alert' } = {}) => {
 
   try {
     const result = spawnSync('osascript', ['-e', appleScript], {
-      stdio: ['ignore', 'ignore', 'pipe'],
+      stdio: 'ignore',
       encoding: 'utf-8',
     })
 
