@@ -1,0 +1,41 @@
+{
+  "name": "cross-alert",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.js"
+    }
+  },
+  "types": "./dist/index.d.ts",
+  "engines": {
+    "node": ">=16"
+  },
+  "version": "0.0.1",
+  "scripts": {
+    "build": "rimraf dist && rollup -c --bundleConfigAsCjs"
+  },
+  "keywords": [
+    "alert",
+    "messagebox"
+  ],
+  "author": "Pooya Badiee",
+  "license": "MIT",
+  "description": "Cross-platform alert function for Windows, Web, Linux, and macOS, with support for Bun.",
+  "repository": {
+    "url": "git+https://github.com/pooya-badiee/cross-alert.git"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^26.0.1",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@types/node": "^20.16.5",
+    "rimraf": "^6.0.1",
+    "rollup": "^4.22.0",
+    "tslib": "^2.7.0",
+    "typescript": "^5.6.2"
+  }
+}
