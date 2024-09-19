@@ -15,7 +15,7 @@ if (!isWeb) {
   isLinux = platform === 'linux'
 }
 
-export const nodeAlert = isWeb
+export const crossAlert = isWeb
   ? (window.alert as AlertFunction)
   : isWindows
   ? windowsAlert

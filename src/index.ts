@@ -1,2 +1,2 @@
-import { nodeAlert } from './cross-alert'
-export default nodeAlert
+export { crossAlert as alert } from './cross-alert'
+

@@ -8,7 +8,7 @@ export const windowsAlert: AlertFunction = (message, { title = 'Alert' } = {}) =
 
   const powershellCommand = `
     Add-Type -AssemblyName System.Windows.Forms;
-    [System.Windows.Forms.MessageBox]::Show(${escapedMessage}, ${escapedTitle});
+    [System.Windows.Forms.MessageBox]::Show("${escapedMessage}", "${escapedTitle}");
   `
 
   try {

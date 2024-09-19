@@ -13,7 +13,7 @@ npm install cross-alert
 ## Usage
 
 ```typescript
-import alert from 'cross-alert'
+import { alert } from 'cross-alert'
 
 // Show an alert message
 alert('This is an alert message!')
