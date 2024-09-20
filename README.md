@@ -1,4 +1,4 @@
-# cross-alert
+# cross-alert !!! under test and development
 
 **`cross-alert`** is a cross-platform alert function library supporting Windows, Web, Linux, and macOS, with additional support for Bun. This library allows you to display alert messages in a consistent manner across different environments.
 
