@@ -15,7 +15,7 @@
   "engines": {
     "node": ">=16"
   },
-  "version": "0.0.6",
+  "version": "0.0.7",
   "scripts": {
     "build": "rimraf dist && rollup -c --bundleConfigAsCjs"
   },
