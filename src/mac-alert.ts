@@ -1,8 +1,9 @@
-import { spawnSync } from 'node:child_process'
 import { AlertFunction } from './types'
 import { shellEscape } from './utils'
 
-export const macAlert: AlertFunction = (message, { title = 'Alert' } = {}) => {
+export const macAlert: AlertFunction = async (message, { title = 'Alert' } = {}) => {
+  const childProcess = await import('node:child_process')
+  const { spawnSync } = childProcess
   const escapedMessage = shellEscape(message)
   const escapedTitle = shellEscape(title)
 

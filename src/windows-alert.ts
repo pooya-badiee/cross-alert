@@ -1,10 +1,11 @@
-import { spawnSync } from 'node:child_process'
 import { AlertFunction } from './types'
 import { shellEscape } from './utils'
 
-export const windowsAlert: AlertFunction = (message, { title = 'Alert' } = {}) => {
+export const windowsAlert: AlertFunction = async (message, { title = 'Alert' } = {}) => {
   const escapedMessage = shellEscape(message)
   const escapedTitle = shellEscape(title)
+  const childProcess = await import('node:child_process')
+  const { spawnSync } = childProcess
 
   const powershellCommand = `
     Add-Type -AssemblyName System.Windows.Forms;

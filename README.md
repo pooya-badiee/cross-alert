@@ -16,9 +16,9 @@ npm install cross-alert
 import { alert } from 'cross-alert'
 
 // Show an alert message
-alert('This is an alert message!')
+await alert('This is an alert message!')
 // Or optionally specify a title
-alert('This is an alert message!', { title: 'Alert' })
+await alert('This is an alert message!', { title: 'Alert' })
 ```
 
 ## Platform Support

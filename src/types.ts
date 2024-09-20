@@ -1,1 +1,1 @@
-export type AlertFunction = (message: string | number, options?: { title?: string }) => void
+export type AlertFunction = (message: string | number, options?: { title?: string }) => Promise<void>

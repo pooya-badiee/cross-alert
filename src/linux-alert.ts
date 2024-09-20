@@ -1,8 +1,9 @@
-import { spawnSync } from 'node:child_process'
 import { AlertFunction } from './types'
 import { shellEscape } from './utils'
 
-const showAlertWithCommand = (command: string) => {
+const showAlertWithCommand = async (command: string) => {
+  const childProcess = await import('node:child_process')
+  const { spawnSync } = childProcess
   try {
     const result = spawnSync(command, { shell: true, stdio: 'ignore' })
     if (result.error) {
@@ -13,7 +14,7 @@ const showAlertWithCommand = (command: string) => {
   }
 }
 
-export const linuxAlert: AlertFunction = (message, { title = 'Alert' } = {}) => {
+export const linuxAlert: AlertFunction = async (message, { title = 'Alert' } = {}) => {
   const escapedMessage = shellEscape(message)
   const escapedTitle = shellEscape(title)
 
